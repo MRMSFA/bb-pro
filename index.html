@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Block Blast Pro</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         LOADING SCREEN
+    ====================================================== -->
+
+    <div id="loading-screen">
+
+        <div class="loading-background-glow"></div>
+
+        <div class="loading-content">
+
+            <div class="loading-logo">
+
+                <div class="loading-blocks">
+
+                    <span class="loading-block block-1"></span>
+                    <span class="loading-block block-2"></span>
+                    <span class="loading-block block-3"></span>
+                    <span class="loading-block block-4"></span>
+                    <span class="loading-block block-5"></span>
+
+                </div>
+
+            </div>
+
+
+            <h1 class="loading-title">
+
+                BLOCK BLAST
+                <span>PRO</span>
+
+            </h1>
+
+
+            <p class="loading-subtitle">
+
+                PUZZLE • STRATEGY • BLAST
+
+            </p>
+
+
+            <div class="loading-bar">
+
+                <div
+                    id="loading-progress"
+                    class="loading-progress"
+                ></div>
+
+            </div>
+
+
+            <div class="loading-status">
+
+                <span id="loading-text">
+                    INITIALIZING GAME
+                </span>
+
+                <span id="loading-percent">
+                    0%
+                </span>
+
+            </div>
+
+
+            <div class="loading-footer">
+
+                GET READY TO BLAST
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         MAIN MENU
+    ====================================================== -->
+
+    <div id="main-menu">
+
+
+        <div class="menu-background-glow glow-one"></div>
+
+        <div class="menu-background-glow glow-two"></div>
+
+
+        <div class="menu-content">
+
+
+            <!-- LOGO -->
+
+            <div class="menu-logo">
+
+                <div class="menu-logo-blocks">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+            </div>
+
+
+            <!-- TITLE -->
+
+            <h1 class="menu-title">
+
+                BLOCK BLAST
+
+                <span>PRO</span>
+
+            </h1>
+
+
+            <p class="menu-tagline">
+
+                THINK • PLACE • BLAST
+
+            </p>
+
+
+            <!-- BEST SCORE -->
+
+            <div class="menu-best">
+
+                <span>BEST SCORE</span>
+
+                <strong id="menu-best-score">
+                    0
+                </strong>
+
+            </div>
+
+
+            <!-- PLAY -->
+
+            <button
+                id="play-button"
+                class="play-button"
+                type="button"
+            >
+
+                <span class="play-icon">
+                    ▶
+                </span>
+
+                <span>
+                    PLAY
+                </span>
+
+            </button>
+
+
+            <!-- MENU ACTIONS -->
+
+            <div class="menu-actions">
+
+                <button
+                    id="settings-button"
+                    class="menu-action-button"
+                    type="button"
+                >
+
+                    <span class="action-icon">
+                        ⚙
+                    </span>
+
+                    <span>
+                        SETTINGS
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <!-- SMALL INFO -->
+
+            <div class="menu-info">
+
+                <span>
+                    8 × 8 BOARD
+                </span>
+
+                <span class="menu-dot">
+                    •
+                </span>
+
+                <span>
+                    NO LIMITS
+                </span>
+
+            </div>
+
+
+            <!-- CREATOR -->
+
+            <div class="menu-creator">
+
+                MADE BY
+
+                <span>
+                    AYAN UR REHMAN
+                </span>
+
+            </div>
+
+
+            <div class="menu-version">
+
+                BLOCK BLAST PRO
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         SETTINGS PANEL
+    ====================================================== -->
+
+    <div id="settings-panel">
+
+
+        <div class="settings-box">
+
+
+            <!-- HEADER -->
+
+            <div class="settings-header">
+
+                <div>
+
+                    <span class="settings-small-title">
+                        GAME
+                    </span>
+
+                    <h2>
+                        SETTINGS
+                    </h2>
+
+                </div>
+
+
+                <button
+                    id="settings-close"
+                    class="settings-close"
+                    type="button"
+                    aria-label="Close settings"
+                >
+
+                    ×
+
+                </button>
+
+            </div>
+
+
+
+            <!-- AUDIO -->
+
+            <div class="settings-section">
+
+                <div class="settings-section-title">
+
+                    AUDIO
+
+                </div>
+
+
+                <!-- MUSIC -->
+
+                <div class="setting-row">
+
+                    <div class="setting-info">
+
+                        <div class="setting-icon">
+                            🎵
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Background Music
+                            </strong>
+
+                            <span>
+                                Play music while gaming
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="music-toggle"
+                        >
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- SFX -->
+
+                <div class="setting-row">
+
+                    <div class="setting-info">
+
+                        <div class="setting-icon">
+                            🔊
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Sound Effects
+                            </strong>
+
+                            <span>
+                                Buttons and game sounds
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="sfx-toggle"
+                        >
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- VOLUME -->
+
+                <div class="volume-setting">
+
+                    <div class="volume-top">
+
+                        <span>
+                            MUSIC VOLUME
+                        </span>
+
+                        <strong id="music-volume-value">
+                            35%
+                        </strong>
+
+                    </div>
+
+
+                    <input
+                        id="music-volume"
+                        class="volume-slider"
+                        type="range"
+                        min="0"
+                        max="1"
+                        step="0.01"
+                        value="0.35"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- GAMEPLAY -->
+
+            <div class="settings-section">
+
+                <div class="settings-section-title">
+
+                    GAMEPLAY
+
+                </div>
+
+
+                <!-- VIBRATION -->
+
+                <div class="setting-row">
+
+                    <div class="setting-info">
+
+                        <div class="setting-icon">
+                            📳
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Vibration
+                            </strong>
+
+                            <span>
+                                Haptic feedback on mobile
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="vibration-toggle"
+                        >
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- FULLSCREEN -->
+
+                <button
+                    id="fullscreen-button"
+                    class="fullscreen-button"
+                    type="button"
+                >
+
+                    <span>
+                        ⛶
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            FULLSCREEN
+                        </strong>
+
+                        <small>
+                            Use the entire screen
+                        </small>
+
+                    </div>
+
+                    <b>
+                        ›
+                    </b>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- FOOTER -->
+
+            <div class="settings-footer">
+
+                BLOCK BLAST PRO
+
+                <span>
+                    •
+                </span>
+
+                v1.0
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         GAME
+    ====================================================== -->
+
+    <div id="game">
+
+
+        <!-- HEADER -->
+
+        <header>
+
+            <div class="logo">
+
+                BLOCK BLAST PRO
+
+            </div>
+
+
+            <div class="score-area">
+
+                <div class="score-box">
+
+                    <span>
+                        Score
+                    </span>
+
+                    <h2 id="score">
+                        0
+                    </h2>
+
+                </div>
+
+
+                <div class="score-box">
+
+                    <span>
+                        Best
+                    </span>
+
+                    <h2 id="best-score">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- BOARD -->
+
+        <section id="board"></section>
+
+
+
+        <!-- BLOCKS -->
+
+        <section id="blocks"></section>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/storage.js"></script>
+    <script src="js/score.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/blocks.js"></script>
+    <script src="js/sound.js"></script>
+    <script src="js/drag.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
